@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>Token Vending Machine</display-name>
+    
+    <welcome-file-list>
+        <welcome-file>home.jsp</welcome-file>
+    </welcome-file-list>       
+    
+    <!-- ========================================================================================================== -->
+    <!-- Servlet for Device Registration -->
+    <!-- ========================================================================================================== -->	
+	<servlet>
+		<servlet-name>RegisterDeviceServlet</servlet-name>
+		<servlet-class>com.amazonaws.tvm.anonymous.RegisterDeviceServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterDeviceServlet</servlet-name>
+		<url-pattern>/registerdevice/*</url-pattern>
+	</servlet-mapping>
+	
+	
+    <!-- ========================================================================================================== -->
+    <!-- Servlet for GetToken -->
+    <!-- ========================================================================================================== -->	
+	<servlet>
+		<display-name>GetTokenServlet</display-name>
+		<servlet-name>GetTokenServlet</servlet-name>
+		<servlet-class>com.amazonaws.tvm.GetTokenServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetTokenServlet</servlet-name>
+		<url-pattern>/gettoken/*</url-pattern>
+	</servlet-mapping>
+             
+</web-app>
