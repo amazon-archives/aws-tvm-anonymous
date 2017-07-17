@@ -1,6 +1,6 @@
 
-DEPRECATED
-----------
+ARCHIVED
+--------
 
 AWS has released Amazon Cognito. In many cases Amazon Cognito will replace the use of a Token Vending Machine. 
 
